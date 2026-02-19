@@ -1,9 +1,12 @@
 import 'package:course_app_flutter/components/button_home_screen.dart';
 import 'package:course_app_flutter/screens/contracts_screen.dart';
 import 'package:course_app_flutter/screens/machinery_screen.dart';
+import 'package:course_app_flutter/screens/new_client_screen.dart';
+import 'package:course_app_flutter/screens/new_contract_screen.dart';
+import 'package:course_app_flutter/screens/return_machine_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:course_app_flutter/styles/app_colors.dart';
-import 'clients_screen.dart';
+import 'client_search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -41,21 +44,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Button2HomeScreen(
                     label: 'Nuevo Contrato',
-                    onPressed: () {
-                      // Handle navigation or action here
-                    },
+                    onPressed: () => _navigateTo(context, const NewContractScreen()),
                   ),
                   Button2HomeScreen(
-                    label: 'Hacer dovolución',
-                    onPressed: () {
-                      // Handle navigation or action here
-                    },
+                    label: 'Hacer devolución',
+                    onPressed: () => _navigateTo(context, const ReturnMachineScreen()),
                   ),
                   Button2HomeScreen(
                     label: 'Nuevo cliente',
-                    onPressed: () {
-                      // Handle navigation or action here
-                    },
+                    onPressed: () => _navigateTo(context, const NewClientScreen()),
                   ),
                 ],
               )
@@ -73,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   ButtonHomeScreen(
                     label: 'Clientes',
-                    onPressed: () => _navigateTo(context, const ClientsScreen()),
+                    onPressed: () => _navigateTo(context, const ClientSearchScreen()),
                   ),
                   ButtonHomeScreen(
                     label: 'Máquinas',
@@ -100,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   ButtonHomeScreen(
                     label: 'Clientes',
-                    onPressed: () => _navigateTo(context, const ClientsScreen()),
+                    onPressed: () => _navigateTo(context, const ClientSearchScreen()),
                   ),
                   ButtonHomeScreen(
                     label: 'Máquinas',
