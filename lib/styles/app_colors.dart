@@ -2,7 +2,7 @@ import 'dart:ui';
 
 class AppColors {
   // Un morado más vibrante para que destaque sobre fondos oscuros
-  static const Color primary = Color(0xFF9D50FF);
+  static const Color primary = Color.fromARGB(255, 116, 12, 132);
   // Profundidad para gradientes o elementos secundarios
   static const Color secondary = Color(0xFF6200EE);
   // Amarillo "Gold" vibrante para alertas, estados activos o botones clave
@@ -10,7 +10,7 @@ class AppColors {
 
   // --- Backgrounds & Surfaces ---
   // No uses negro puro (#000), usa un gris azulado/púrpura muy oscuro para dar profundidad
-  static const Color background = Color(0xFF121212);
+  static const Color background = Color.fromARGB(255, 100, 100, 100);//0xFF121212
   // Elevación nivel 1: Para tarjetas y contenedores
   static const Color backgroundComponent = Color(0xFF1E1E1E);
   // Elevación nivel 2: Para cuando un ítem está seleccionado (un toque del primario)

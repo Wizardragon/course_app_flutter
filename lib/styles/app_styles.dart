@@ -28,4 +28,29 @@ class AppStyles {
           WidgetState.any: 2,
         }),
       );
+      static ButtonStyle machineButtonStyle2 =
+      ElevatedButton.styleFrom(
+        backgroundColor: const Color(0xFF474747),
+        foregroundColor: AppColors.primaryText,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      ).copyWith(
+        // Aplicamos la lógica de estados modernos con .map
+        side: WidgetStateProperty.fromMap({
+          WidgetState.selected: const BorderSide(
+            color: AppColors.accent,
+            width: 2,
+          ),
+          WidgetState.pressed: const BorderSide(
+            color: AppColors.primary,
+            width: 2,
+          ),
+          WidgetState.any: BorderSide.none,
+        }),
+        elevation: WidgetStateProperty.fromMap({
+          WidgetState.pressed: 0,
+          WidgetState.hovered: 4,
+          WidgetState.any: 2,
+        }),
+      );
 }
